@@ -39,42 +39,49 @@ void draw() {
 void makeCube() {
   beginShape(QUADS); // 図形の種類を四角形(QUADS)に設定
   texture(dice1); // 貼り付ける画像を指定
-  vertex(-1,  1, 1, 0, 0); // 第4,5変数にUV座標を追加
-  vertex( 1,  1, 1, 0, 1);
-  vertex( 1, -1, 1, 1, 1);
-  vertex(-1, -1, 1, 1, 0);
+  vertex(-1,  1,  1, 0, 0); // 第4,5変数にUV座標を追加
+  vertex( 1,  1,  1, 0, 1);
+  vertex( 1, -1,  1, 1, 1);
+  vertex(-1, -1,  1, 1, 0);
   endShape(); // ここで終わらせる
 
-  beginShape(QUADS);
-  texture(dice2);
-  vertex( 1,  1,  1);
-  vertex( 1,  1, -1);
-  vertex( 1, -1, -1);
-  vertex( 1, -1,  1);
+  beginShape(QUADS); // 図形の種類を四角形(QUADS)に設定
+  texture(dice2); // 貼り付ける画像を指定
+  vertex( 1,  1,  1, 0, 0);
+  vertex( 1,  1, -1, 0, 1);
+  vertex( 1, -1, -1, 1, 1);
+  vertex( 1, -1,  1, 1, 0);
+  endShape(); // ここで終わらせる
 
-  fill(0, 0, 255);
-  vertex( 1, 1, -1);
-  vertex(-1, 1, -1);
-  vertex(-1, -1, -1);
-  vertex( 1, -1, -1);
+  beginShape(QUADS); // 図形の種類を四角形(QUADS)に設定
+  texture(dice6); // 貼り付ける画像を指定
+  vertex( 1,  1, -1, 0, 0);
+  vertex(-1,  1, -1, 0, 1);
+  vertex(-1, -1, -1, 1, 1);
+  vertex( 1, -1, -1, 1, 0);
+  endShape(); // ここで終わらせる
 
-  fill(255, 255, 0);
-  vertex(-1, 1, -1);
-  vertex(-1, 1, 1);
-  vertex(-1, -1, 1);
-  vertex(-1, -1, -1);
+  beginShape(QUADS); // 図形の種類を四角形(QUADS)に設定
+  texture(dice5); // 貼り付ける画像を指定
+  vertex(-1,  1, -1, 0, 0);
+  vertex(-1,  1,  1, 0, 1);
+  vertex(-1, -1,  1, 1, 1);
+  vertex(-1, -1, -1, 1, 0);
+  endShape(); // ここで終わらせる
+  
+  beginShape(QUADS); // 図形の種類を四角形(QUADS)に設定
+  texture(dice3); // 貼り付ける画像を指定 
+  vertex(-1,  1, -1, 0, 0);
+  vertex( 1,  1, -1, 0, 1);
+  vertex( 1,  1,  1, 1, 1);
+  vertex(-1,  1,  1, 1, 0);
+  endShape(); // ここで終わらせる
 
-  fill(0, 255, 255);
-  vertex(-1, 1, -1);
-  vertex( 1, 1, -1);
-  vertex( 1, 1, 1);
-  vertex(-1, 1, 1);
-
-  fill(255, 0, 255);
-  vertex(-1, -1, -1);
-  vertex( 1, -1, -1);
-  vertex( 1, -1, 1);
-  vertex(-1, -1, 1);
-
-  endShape();
+  beginShape(QUADS); // 図形の種類を四角形(QUADS)に設定
+  texture(dice4); // 貼り付ける画像を指定 
+  vertex(-1, -1, -1, 0, 0);
+  vertex( 1, -1, -1, 0, 1);
+  vertex( 1, -1,  1, 1, 1);
+  vertex(-1, -1,  1, 1, 0);
+  endShape(); // ここで終わらせる
 }
